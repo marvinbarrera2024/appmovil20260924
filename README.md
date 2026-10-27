@@ -30,6 +30,9 @@ No se instaló `react-test-renderer`: la documentación de Expo lo considera obs
 # Ejecutar toda la suite una vez
 npm test -- --runInBand
 
+# Ejecutar las pruebas y generar el reporte de cobertura
+npm test -- --coverage
+
 # Ejecutar una pantalla específica
 npm test -- --runInBand src/components/__tests__/LoginScreen.test.js
 
@@ -38,3 +41,5 @@ npm test -- --watch
 ```
 
 `--runInBand` ejecuta las pruebas en un único proceso, útil para una salida más clara en entornos de desarrollo y CI.
+
+La cobertura se genera en `coverage/`, incluido el informe HTML en `coverage/lcov-report/index.html`. El reporte HTML de resultados de las pruebas se guarda en `coverage/test-report.html`.
